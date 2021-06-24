@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<body background-image>
+<style>
+.p1 {
+  font-family: "Times New Roman", Times, serif;
+}
+.p3 {
+  font-family: "Monaco",  monospace;
+}
+.p2 {
+  font-family: Arial, Helvetica, sans-serif;
+}
+h1 {
+  color: Yellow;
+}
+h3 {
+  color: skyBlue;
+}
+h2 {
+  color: skyBlue;
+}
+.center {
+  margin: auto;
+  width: 50%;
+  border: 3px solid green;
+  padding: 10px;
+}
+body {
+  background-image: url('back.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+}
+
+</style>
+
+
+<script>
+
+function myFunction() 
+{
+  var p = document.getElementById("princ").value; 
+  var n = document.getElementById("time").value;
+  var i = document.getElementById("interest").value;
+  var f = (i/100)*(1/12);
+        var n = Math.pow(1+f, n);
+		var q = n-1;
+		var t = q/f;
+		var s = 1+f;
+  var m = p*t*s;
+  //var m = p *(((1+i)^n - 1)/i)*(1+i) ;
+  document.getElementById("demo").innerHTML = m;
+}
+</script>
+
+
+
+
+
+
+<div class="center">
+<h1><b><p class="p2">SIP Calculator – Systematic Investment Plan Calculator</p></b></h1>
+<h3>
+<p class="p1">
+
+Prospective investors can think that SIPs and mutual funds are the same.
+ However, SIPs are merely a method of investing in mutual funds, the other 
+ method being a lump sum. A SIP calculator is a tool that helps you determine
+ the returns you can avail when parking your funds in such investment tools.
+ Systematic Investment Plan or SIP is a process of investing a fixed sum of 
+ money in mutual funds at regular intervals. SIPs usually allow you to invest
+ weekly, quarterly, or monthly. 
+
+<br>
+</p>
+
+<br>
+<h2>What is a SIP Calculator?</h2>
+<p class="p1"><h3>
+A SIP calculator is a simple tool that allows individuals to get
+ an idea of the returns on their mutual fund investments made 
+ through SIP. SIP investments in mutual funds have become one 
+ of the most popular investment options for millennials lately.
+These mutual fund sip calculators are designed to give potential 
+investors an estimate on their mutual fund investments. However, 
+the actual returns offered by a mutual fund scheme varies 
+depending on various factors. The SIP calculator does not 
+provide clarification for the exit load and expense ratio 
+(if any).This calculator will calculate the wealth gain and 
+expected returns for your monthly SIP investment. Indeed, you
+ get a rough estimate on the maturity amount for any of your
+ monthly SIP, based on a projected annual return rate.
+</h3>
+</p>
+<br>
+<h2>How can a SIP return calculator help you?</h2>
+<h3>
+SIPs are a more lucrative mode of investing funds compared to
+ a lump sum amount according to several mutual fund experts. 
+ It helps you become financially disciplined and create a habit
+ of savings that can benefit you in the future.
+
+A SIP calculator online is a beneficial tool, which shows 
+the estimated returns you will earn after the investment tenure.
+
+Few of the benefits of SIP calculators include –
+
+1)Assists you to determine the amount you want to invest in.
+2)Tells you the total amount you have invested.
+3)Gives an estimated value of the returns.
+</h3>
+</div>
+<br>
+<br>
+
+
+
+<div class="center">
+<h1>SIP CALCULATOR<h1>
+<h2>Enter Monthly Investement Amount<h2>
+<input type="number" id="princ" value="500">
+<br>
+<h2>Enter time period in months<h2>
+<input type="number" id="time" value="60">
+<br>
+<h2>Enter Expected rate of interst</h2>
+<input type="number" id="interest" value="12">
+<br>
+<br>
+<br>
+
+<button onclick="myFunction()">Expected Returns </button>
+
+<h1><p id="demo"></p></h1>
+
+
+</div>
+<br>
+<br>
+
+
+
+</body>
+</html>
